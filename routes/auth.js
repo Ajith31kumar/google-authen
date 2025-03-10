@@ -15,13 +15,13 @@ router.get(
   (req, res) => {
     console.log(req.user);
     const token = jwt.sign({ id: req.user._id }, "your_jwt_secret", { expiresIn: "1h" });
-    res.redirect(`http://localhost:3000/dashboard?email=${req.user.emails[0].value}`);
+    res.redirect(`https://www.vevekseetharaman.com/dashboard?email=${req.user.emails[0].value}`);
     // res.json({email: req.user.email})
   }
 );
 
 router.get("/logout", (req, res) => {
-  req.logout(() => res.redirect("http://localhost:3000/"));
+  req.logout(() => res.redirect("https://www.vevekseetharaman.com/"));
 });
 
 export default router;
