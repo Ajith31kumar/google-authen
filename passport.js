@@ -12,6 +12,7 @@ passport.use(
       clientSecret: process.env.CLIENT_SECRET,
       callbackURL: "https://google-authen.onrender.com/auth/google/callback",
       //https://google-authen.onrender.com
+      //https://google-authen.onrender.com/auth/google/callback
     },
     async (accessToken, refreshToken, profile, done) => {
       try {
