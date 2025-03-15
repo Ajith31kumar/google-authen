@@ -17,4 +17,5 @@ app.use(passport.session());
 
 app.use("/auth", authRoutes); // Authentication routes
 
+
 app.listen(8080, () => console.log("Server running on port 8080"));
